@@ -75,14 +75,14 @@ public class Food implements Serializable {
 
     @Override
     public int hashCode() {
-        return id == null ? -1 : id.hashCode();
+        return code == null ? -1 : code.hashCode();
     }
     
     @Override
     public boolean equals(Object other) {
         if (other instanceof Food) {
             Food foodOther = (Food)other;
-            if (foodOther.getId() != null && id != null && id.equals(foodOther.getId())) 
+            if (foodOther.getCode() != null && code != null && code == foodOther.getCode()) 
                 return true;
         }
         return false;
